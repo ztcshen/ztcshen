@@ -1,79 +1,51 @@
-# ztcshen
+# 你好，我是 ztcshen
 
-I build agent-native testing infrastructure for API workflows, SQL-backed
-control planes, and evidence-driven quality gates.
+**软件工程硕士 · Java 后端与全栈开发 · 自动化测试与开发工具**
 
-My current open-source focus is
-[AgentTestBench](https://github.com/ztcshen/agent-testbench): a local-first test
-workbench that helps test engineers and automation agents discover runnable
-targets, execute API cases and workflows, and review reproducible Evidence
-through compact HTML/JSON reports.
+我主要从事 Java 后端和全栈开发，做过账户与交易系统、异步任务、系统集成和数据管理相关工作。除了业务系统开发，我也在持续维护接口测试、数据库建模和 AI 辅助开发方面的开源工具。
 
-[![AgentTestBench](https://img.shields.io/badge/Featured-AgentTestBench-0969da)](https://github.com/ztcshen/agent-testbench)
-![Go](https://img.shields.io/badge/Go-backend-00ADD8)
-![React](https://img.shields.io/badge/React-workbench-61DAFB)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-store-4169E1)
-![MySQL](https://img.shields.io/badge/MySQL-store-4479A1)
-![Testing](https://img.shields.io/badge/Testing-evidence--driven-2ea44f)
+我关注从需求、数据模型和接口设计，到部署、联调、测试与故障排查的完整工程过程，希望把复杂业务做成可维护、可验证的软件。
 
-## Current Focus
+## 我做什么
 
-I am turning testing workflows into systems that agents can operate directly:
-clear discovery APIs, explicit Store-backed state, reproducible execution, and
-failure reports that carry enough context for a reviewer to make a decision.
+- **后端与系统集成**：使用 Java、Spring Boot / Spring Cloud、MyBatis 和 Dubbo 开发服务，处理账户、交易和外部系统对接流程。
+- **并发与数据一致性**：结合多线程、线程池、Redis 调度和消息队列处理异步任务；关注数据库事务、幂等、补偿与故障恢复。
+- **全栈与工程交付**：使用 Vue 3 / React、TypeScript / JavaScript 构建管理页面和工具界面，结合 Linux、Docker、自动化脚本与 CI 完成部署和验证。
+- **测试与 AI 工具**：使用 Go、Python、TypeScript 开发接口与工作流测试工具，结合 Playwright、执行记录和报告，让自动化结果可以复现和检查。
 
-## What I Work On
+常用数据组件：**MySQL · PostgreSQL · SQLite · Redis · RabbitMQ · Kafka**。
 
-- Agent-native testing systems with discover-then-run contracts for automation.
-- Store-first control planes backed by PostgreSQL, MySQL, and SQLite.
-- API case execution, workflow regression, and compact failure reports.
-- Evidence pipelines that preserve request, response, assertion, timing, log,
-  and topology context.
-- Local-first developer tools that stay generic instead of hardcoding one
-  business domain into the core.
-
-## Featured Project
+## 公开项目
 
 ### [AgentTestBench](https://github.com/ztcshen/agent-testbench)
 
-AgentTestBench is an agent-native test environment for API workflows,
-auditable Evidence, and quality gates.
+面向测试工程师和 AI Agent 的接口与工作流测试工作台。通过 API 发现可运行的测试目标，执行用例、工作流和测试场景图，并把请求、响应、断言和执行结果保存为可查看的记录与报告。
 
-It gives agents and test engineers one control plane for:
+- **关注的问题**：测试资产分散、流程回归难复用、失败结果缺少排查上下文。
+- **技术栈**：Go、React、TypeScript，支持 SQLite / PostgreSQL / MySQL。
+- **入口**：[中文说明](https://github.com/ztcshen/agent-testbench/blob/main/README.zh-CN.md) · [源码](https://github.com/ztcshen/agent-testbench)
 
-- registering and discovering runnable environments;
-- running HTTP API cases and ordered workflow steps;
-- indexing Evidence into an active SQL Store;
-- reviewing failures through HTML/JSON reports and a React workbench;
-- keeping the open-source core generic while real team workflows live in
-  external validation/config packages.
+### [ER Wiki](https://github.com/ztcshen/er-wiki)
 
-The project is pre-1.0 and actively moving toward a cleaner SQL Store-first
-mainline, stronger environment catalog flows, and more complete real topology
-validation.
+离线数据库建模与 ER 关系可视化工具。基于 drawDB、ELK、libavoid 等开源组件，让复杂表关系更容易阅读和追踪，支持本地 SQL 导入、模型编辑与 SVG / PNG 导出。
 
-## Technical Direction
+- **关注的问题**：表与关系增多后，字段映射、连线和跨域关系难以看清。
+- **技术栈**：React、Electron、JavaScript，结合正交布局与避障布线。
+- **入口**：[在线演示](https://ztcshen.github.io/er-wiki/demo.html) · [中文说明](https://github.com/ztcshen/er-wiki/blob/main/README.zh-CN.md) · [桌面版下载](https://github.com/ztcshen/er-wiki/releases/latest)
 
-I care about testing infrastructure that is boring in the best way: explicit
-state, reproducible runs, observable failures, and APIs that agents can call
-without relying on hidden human context.
+### 其他工具
 
-Current themes:
+| 项目 | 用途 |
+| --- | --- |
+| [markdown-gate](https://github.com/ztcshen/markdown-gate) | TypeScript CLI 与 Hook 工具，检查 AI 生成的 Markdown；结合 promptfoo 做规则回归与质量评估。 |
+| [github-feature-radar](https://github.com/ztcshen/github-feature-radar) | 按具体功能检索和整理开源参考，维护功能索引，支持模糊查询、数据校验和自动更新。 |
 
-- SQL Store as the source of truth for runtime state and verification results.
-- Evidence-rich reports instead of one-line pass/fail output.
-- Generic open-source core, private domain examples outside the repository.
-- CLI/API/UI parity for daily testing workflows.
-- Quality gates that can be rerun locally and in CI.
+## About me
 
-## Stack
+I am a software engineer with a master's degree in Software Engineering. My work spans Java backend and full-stack development, account and transaction workflows, asynchronous processing, and system integration.
 
-Go, JavaScript/TypeScript, React, PostgreSQL, MySQL, SQLite, Playwright, Docker,
-CI quality gates, API workflow testing, and agent-operated developer tools.
+I build open-source tools for API testing, database modeling, and developer automation. I care about maintainable systems, reproducible tests, and clear evidence of how software behaves.
 
-## Links
+---
 
-- Project: [ztcshen/agent-testbench](https://github.com/ztcshen/agent-testbench)
-- Docs: [AgentTestBench README](https://github.com/ztcshen/agent-testbench#readme)
-- Roadmap: [docs/roadmap.md](https://github.com/ztcshen/agent-testbench/blob/main/docs/roadmap.md)
-- Share kit: [docs/share-kit.md](https://github.com/ztcshen/agent-testbench/blob/main/docs/share-kit.md)
+项目使用、问题反馈与技术讨论，欢迎在对应仓库的 Issues 中交流。
